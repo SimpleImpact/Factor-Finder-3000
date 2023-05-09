@@ -1,7 +1,8 @@
+
 while 1:
     print("")
-    num = int(input(""))
-    print("\n")
+    num = int(input("Factor the number "))
+    print(" ")
     count = 1
     output = 0
 
@@ -13,3 +14,4 @@ while 1:
         if is_whole(output):
             print(int(output), end=" ")
         count += 1
+    count = 1
