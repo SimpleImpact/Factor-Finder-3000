@@ -14,11 +14,13 @@ print("5. Factor      ")
 print("6. Square      ")
 print("7. Square Root ")
 print("8. Quadratic   ")
-print("9. Pythagreon  ")
-print("10. Next Page   ")
-choice = int(input("Choose 1-10: "))
+print("9. Next Page")
+choice = int(input("Choose 1-9: "))
 
 if page == 1:
+    if choice == 9:
+        page = 2
+
     if choice == 1:
         print(int(input("1st Number: ")) + int(input("2nd Number: ")))
 
@@ -55,8 +57,14 @@ if page == 1:
         c = float(input("c = "))
         print(( -(b) + math.sqrt((b * b)) -4 * (a) * (c)) / a)
         print(( -(b) - math.sqrt((b * b)) -4 * (a) * (c)) / a)
+            
+if page == 2:
+    print("\n", " Page 2", "\n")
+    print("1. Pythagorean   ")
+    print("2. Find Midpoint ")
+    choice = int(input("Choose 1-2: "))
 
-    if choice == 9:
+    if choice == 1:
         a = float(input("a = "))
         b = float(input("b = "))
         answer = (math.sqrt((a * a) + (b * b)))
@@ -64,5 +72,14 @@ if page == 1:
             print(answer)
         else:
             answer = answer * answer
-            print("sqrt(", answer, ")")
-            
+            print("sqrt(" + str(answer) + ")")
+    
+    if choice == 2:
+        x1 = int(input("What is x1: "))
+        x2 = int(input("What is x1: "))
+        y1 = int(input("What is x1: "))
+        y2 = int(input("What is x1: "))
+        x = (x1 + x2) / 2
+        y = (y1 + y2) / 2
+        print("(" + str(int(x)) + "," + str(int(y)) + ")")
+
